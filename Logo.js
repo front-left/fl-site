@@ -38,7 +38,11 @@ class Logo1 {
 		this.controls.minAzimuthAngle = -Math.PI/4;
 		this.controls.maxPolarAngle = 3*Math.PI/4; 
 		this.controls.minPolarAngle = Math.PI/4;
-		
+		console.log(THREE.TOUCH);
+		this.controls.touches = {
+			TWO: THREE.TOUCH.ROTATE
+		}
+		console.log(this.controls.touches);
 		this.clock = new THREE.Clock();
 	}
 	
