@@ -18,7 +18,8 @@ class Logo1 {
 		this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 		this.renderer.setClearColor(0x828282, 1);
-		document.body.appendChild(this.renderer.domElement);
+		let logoContainer = document.getElementById("logoContainer");
+		logoContainer.appendChild(this.renderer.domElement);
 		
 		this.camera = new THREE.PerspectiveCamera(
 			45,

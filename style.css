@@ -49,6 +49,7 @@ body{
 canvas{
 	width: 100vw;
 	height: 100vh;
+	position: absolute;
 	/* position: fixed; */
 	/* top: 5rem;
 	left: 5rem; */

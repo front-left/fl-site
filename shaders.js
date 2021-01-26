@@ -34,7 +34,7 @@ const fragmentShader = `
     vec3 texture = texture2D(uTexture, uv).rgb;
     // texture *= vec3(uv.x, uv.y, 1.); // To help visualize the repeated uvs
 	vec3 shadow_texture = texture * shadow;
-	if (texture.y < 0.8){
+	if (shadow_texture.y < 0.7){
 		shadow_texture.x = clamp(shadow_texture.x, 0.509, 1.0);
 		shadow_texture.y = clamp(shadow_texture.y, 0.509, 1.0);
 		shadow_texture.z = clamp(shadow_texture.z, 0.509, 1.0);
