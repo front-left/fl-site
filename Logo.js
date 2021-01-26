@@ -68,6 +68,8 @@ class Logo1 {
 				this.addEvents();
 			});
 		});
+		let fallbackLogo = document.getElementById("fallbackLogo");
+		fallbackLogo.remove();
 	}
 	
 	createMesh(){
