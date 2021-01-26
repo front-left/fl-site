@@ -27,7 +27,7 @@ class Logo1 {
 			1000
 		);
 		
-		this.camera.position.z = 5;
+		this.camera.position.z = 60;
 		
 		this.scene = new THREE.Scene();
 		
@@ -70,7 +70,7 @@ class Logo1 {
 	}
 	
 	createMesh(){
-		this.geometry = new THREE.BoxGeometry(1, 1, 1);
+		this.geometry = new THREE.TorusKnotGeometry(9, 3, 768, 3, 4, 3);
 		this.material = new THREE.ShaderMaterial({
 			vertexShader: shaders.vert,
 			fragmentShader: shaders.frag,
@@ -103,7 +103,7 @@ class Logo1 {
 		// Adjust dimensions
 		this.text.position.set(-0.965, -0.275, 0);
 		this.text.rotation.set(Math.PI, 0, 0);
-		this.text.scale.set(0.008, 0.02, 1);
+		this.text.scale.set(0.007, 0.02, 1);
 		
 		// Add text mesh to buffer scene
 		this.rtScene.add(this.text);
@@ -117,12 +117,12 @@ class Logo1 {
 	
 	render() {
 		this.controls.update();
-		this.mesh.rotation.x += 0.005;
-    this.mesh.rotation.z += 0.005;
-	this.material.uniforms.uTime.value = this.clock.getElapsedTime();
-	this.renderer.setRenderTarget(this.rt);
-    this.renderer.render(this.rtScene, this.rtCamera);
-    this.renderer.setRenderTarget(null);
+		// this.mesh.rotation.x += 0.005;
+		this.mesh.rotation.z += 0.015;
+		this.material.uniforms.uTime.value = this.clock.getElapsedTime();
+		this.renderer.setRenderTarget(this.rt);
+		this.renderer.render(this.rtScene, this.rtCamera);
+		this.renderer.setRenderTarget(null);
 		this.renderer.render(this.scene, this.camera);
 	}
 	
