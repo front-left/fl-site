@@ -34,6 +34,7 @@ body{
 
 .options{
 	font-size: 8rem;
+	margin-left: 1rem;
 	color: #1eff00;
   	-webkit-text-fill-color: transparent;
   	-webkit-text-stroke-width: 1.5px;
@@ -54,3 +55,4 @@ canvas{
 	/* top: 5rem;
 	left: 5rem; */
 }
+
