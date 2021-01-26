@@ -17,7 +17,7 @@ class Logo1 {
 		});
 		this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
-		this.renderer.setClearColor(0x000000, 1);
+		this.renderer.setClearColor(0x828282, 1);
 		document.body.appendChild(this.renderer.domElement);
 		
 		this.camera = new THREE.PerspectiveCamera(
@@ -58,7 +58,7 @@ class Logo1 {
 						side: THREE.DoubleSide,
 						transparent: true,
 						negate: false,
-						color: 0xffffff
+						color: 0x1eff00
 					})
 				);
 				this.createRenderTarget();
@@ -95,7 +95,7 @@ class Logo1 {
 		this.rtCamera.position.z = 2.5;
 		
 		this.rtScene = new THREE.Scene();
-		this.rtScene.background = new THREE.Color("#000000");
+		this.rtScene.background = new THREE.Color("#828282");
 		
 		// Create text mesh with font geometry and material
 		this.text = new THREE.Mesh(this.fontGeometry, this.fontMaterial);
