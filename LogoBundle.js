@@ -17,7 +17,7 @@ class Logo1 {
 		this.renderer = new THREE.WebGLRenderer({
 			alpha: true
 		});
-		this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+		this.renderer.setPixelRatio(window.devicePixelRatio*2);
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 		this.renderer.setClearColor(0x828282, 1);
 		let logoContainer = document.getElementById("logoContainer");
@@ -51887,7 +51887,7 @@ const fragmentShader = `
     vec2 uv = fract(vUv * repeat - vec2(time, 0.)); // The sign of time change direction of movement
 
     // Fake shadow
-    float shadow = clamp(vPos.z / 5., 0., 1.);
+    float shadow = clamp(vPos.z / 2., 0., 1.);
 	
 	// float shadow = 0.9;
 

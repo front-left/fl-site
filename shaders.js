@@ -27,7 +27,7 @@ const fragmentShader = `
     vec2 uv = fract(vUv * repeat - vec2(time, 0.)); // The sign of time change direction of movement
 
     // Fake shadow
-    float shadow = clamp(vPos.z / 5., 0., 1.);
+    float shadow = clamp(vPos.z / 2., 0., 1.);
 	
 	// float shadow = 0.9;
 
