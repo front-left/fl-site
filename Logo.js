@@ -15,7 +15,7 @@ class Logo1 {
 		this.renderer = new THREE.WebGLRenderer({
 			alpha: true
 		});
-		this.renderer.setPixelRatio(window.devicePixelRatio*2);
+		this.renderer.setPixelRatio(window.devicePixelRatio);
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 		this.renderer.setClearColor(0x828282, 1);
 		let logoContainer = document.getElementById("logoContainer");
