@@ -31,18 +31,23 @@ class Logo1 {
 		this.camera.position.z = 60;
 		
 		this.scene = new THREE.Scene();
+		var mobileTouch = document.getElementById("mobileTouch");
+		let mouseQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+		// If mouse
+		if (mouseQuery.matches){
+			mobileTouch.remove();
+			this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+		// If touch
+		} else {
+			this.controls = new OrbitControls(this.camera, mobileTouch);
+		}
 		
-		this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+		
 		this.controls.enableZoom = false;
 		this.controls.maxAzimuthAngle = Math.PI/4;
 		this.controls.minAzimuthAngle = -Math.PI/4;
 		this.controls.maxPolarAngle = 3*Math.PI/4; 
 		this.controls.minPolarAngle = Math.PI/4;
-		console.log(THREE.TOUCH);
-		this.controls.touches = {
-			TWO: THREE.TOUCH.ROTATE
-		}
-		console.log(this.controls.touches);
 		this.clock = new THREE.Clock();
 	}
 	
