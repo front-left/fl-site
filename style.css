@@ -4,6 +4,12 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 
+
+@font-face {
+	font-family: 'Karelia';
+	src: url("./Karelia Medium.otf");
+	
+}
 .fullScreen{
 	width: 100vw;
 	height: 100vh;
